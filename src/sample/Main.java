@@ -18,20 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-
-        Label label=new Label("");
-        Button button=new Button("click me!");
-        button.setStyle("-fx-text-fill: #0000ff");
-
-
-        int test = 0;
-        HBox hbox=new HBox(button,label);
-        button.setOnAction(event ->
-        {
-            label.setText("You clicked " + button.getClickCount() + " times");
-        });
-        Scene scene=new Scene(hbox,500,500);
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root,500,500) );
         primaryStage.show();
     }
 
