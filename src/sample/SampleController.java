@@ -7,10 +7,10 @@ import javafx.scene.input.MouseEvent;
 
 
 public class SampleController {
-    public Label helloWorld;
+    public Label score;
     int numClick=0;
     public void sayHelloWorld(ActionEvent actionEvent) {
         numClick++;
-        helloWorld.setText("You clicked "+numClick+" times.");
+        score.setText("You clicked "+numClick+" times.");
     }
 }
