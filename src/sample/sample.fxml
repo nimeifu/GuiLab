@@ -7,4 +7,5 @@
     <Button text="Click me!" onAction="#sayHelloWorld"/>
 
     <Label GridPane.rowIndex="1" fx:id="score"/>
+    <Label GridPane.rowIndex="2" fx:id="timer"/>
 </GridPane>
