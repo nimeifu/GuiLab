@@ -4,8 +4,19 @@
 <?import javafx.scene.control.Label?>
 <GridPane fx:controller="sample.SampleController"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Button text="Click me!" onAction="#sayHelloWorld"/>
+    <Button text="Click me!" onAction="#ClickEvent">
+        <style>
+            -fx-padding:10;
+            -fx-border-width:3;
+            -fx-font-family: "Arial Narrow";
+            -fx-font-weight: bold;
+        </style>
+    </Button>
+
+
+
 
     <Label GridPane.rowIndex="1" fx:id="score"/>
     <Label GridPane.rowIndex="2" fx:id="timer"/>
+
 </GridPane>

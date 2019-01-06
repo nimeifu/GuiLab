@@ -17,12 +17,11 @@ import java.awt.event.MouseEvent;
 
 public class Main extends Application {
 
-    static long timeStep;
-    SampleController sampleController=new SampleController();
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("FastClicker");
         primaryStage.setScene(new Scene(root,500,500) );
         primaryStage.show();
 

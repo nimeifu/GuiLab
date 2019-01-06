@@ -13,18 +13,18 @@ public class SampleController {
     private Label score;
     @FXML
     private Label timer;
+    @FXML
+    private Label start;
     int numClick=0;
     long timeStep;
 
-    public void sayHelloWorld(ActionEvent actionEvent) {
-        numClick++;
-        score.setText("You clicked "+numClick+" times.");
-    }
 
 
-    public void initialize(){
+    public void initialize() {
         startTimer();
     }
+
+
 
 
     public void startTimer()
@@ -37,12 +37,34 @@ public class SampleController {
                 timer.setText("Timer: " + (int)((timeStep-now)/1000000000));
                 if(now>timeStep)
                 {
-                    timeStep=now+10000000000L;
 
-                }
+                    stop();
+                    timeStep=0;
+
+
+            }
+
             }
         }.start();
     }
+    public void ClickEvent(ActionEvent actionEvent) {
+
+        if(timeStep==0)
+        {
+            score.setText("Time is up! "+"You score is "+numClick);
+        }
+
+        else {
+            numClick++;
+            score.setText("You clicked " + numClick + " times.");
+        }
+        }
+
 
 
 }
+
+
+
+
+
